@@ -1,0 +1,8 @@
+ajax_listado:
+  css:
+    theme:
+      css/listado.css: {}
+  js:
+    js/listado.js: {}
+  dependencies:
+    - core/jquery

@@ -1,0 +1,4 @@
+services:
+  listado_usuarios.servicios:
+    class: 'Drupal\listado_usuarios\Services\Servicios'
+    arguments: ["@messenger"]

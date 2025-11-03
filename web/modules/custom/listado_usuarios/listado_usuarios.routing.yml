@@ -1,0 +1,14 @@
+listado_usuarios.listado:
+  path: "/listado-usuarios"
+  defaults:
+    _controller: 'Drupal\listado_usuarios\Controller\ListadoController::listaUsuarios'
+    _title: "Lista de usuarios registrados"
+  requirements:
+    _permission: "access content"
+listado_usuarios.listado_ajax:
+  path: "/listado-usuarios/ajax"
+  defaults:
+    _controller: 'Drupal\listado_usuarios\Controller\ListadoController::listaUsuariosAjax'
+    _title: "Lista de usuarios registrados por ajax"
+  requirements:
+    _permission: "access content"

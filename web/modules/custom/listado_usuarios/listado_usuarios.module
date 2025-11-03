@@ -1,0 +1,26 @@
+<?php
+
+function listado_usuarios_preprocess_page(array &$variables)
+{
+    $variables['#attached']['library'][] = 'listado_usuarios/ajax_listado';
+}
+
+
+/**
+ *  Implementación de hook_theme() para registrar un template.
+ */
+function listado_usuarios_theme($existing, $type, $theme, $path)
+{
+    return [
+        'mi_plantilla' => [ //nombre del template
+            'variables' => [ //array de variables que usará el template
+                'data' => NULL, // variable etiqueta
+                'total_paginas' => NULL,
+                'pagina_actual' => NULL,
+                'total_usuarios' => NULL,
+            ],
+            'template' => 'mi-plantilla', // nombre del archivo .twig sin la extensión
+            'path' => \Drupal::service('extension.list.module')->getPath('listado_usuarios') . '/templates',
+        ],
+    ];
+}

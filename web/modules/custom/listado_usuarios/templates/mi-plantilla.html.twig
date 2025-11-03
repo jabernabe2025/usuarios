@@ -1,0 +1,58 @@
+<form id="user-search" action="#" method=" post">
+	<h2>Registro</h2>
+
+	<label for="nombre">Nombre:</label>
+	<input type="text" id="nombre" name="nombre">
+
+	<label for="apellidos">Apellidos:</label>
+	<input type="text" id="apellidos" name="apellidos">
+
+	<label for="email">Correo electrónico:</label>
+	<input type="email" id="email" name="email">
+
+	<div class="botones-form">
+		<input type="submit" value="Enviar">
+		<input type="reset" value="Resetear">
+	</div>
+
+</form>
+
+
+<h2>Listado de usuarios</h2>
+
+
+<div id="tabla-usuarios">
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Apellido 1</th>
+				<th>Apellido 2</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for usuario in data %}
+				<tr>
+					<td>{{ usuario.id }}</td>
+					<td>{{ usuario.name }}</td>
+					<td>{{ usuario.surname1 }}</td>
+					<td>{{ usuario.surname2 }}</td>
+					<td>{{ usuario.email }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+<div id="paginador">
+	<p>Página
+		{{ pagina_actual }}
+		de
+		{{ total_paginas }}</p>
+	<div class="botones">
+		{% for i in 1..total_paginas %}
+			<button class="btn-pagina" data-pagina="{{ i }}">{{ i }}</button>
+		{% endfor %}
+	</div>
+</div>

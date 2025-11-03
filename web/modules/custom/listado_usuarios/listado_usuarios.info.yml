@@ -1,0 +1,9 @@
+name: "Listado de Usuarios"
+type: module
+description: "Módulo personalizado para listar usuarios registrados."
+core_version_requirement: ^9 || ^10 || ^11
+package: Custom
+version: 1.0.0
+dependencies:
+  - drupal:node
+  - drupal:user

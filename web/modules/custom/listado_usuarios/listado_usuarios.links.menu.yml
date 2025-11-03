@@ -1,0 +1,6 @@
+listado_usuarios.enlace_listado:
+  title: "Listado de usuarios"
+  description: "Acceder al listado de usuarios"
+  route_name: listado_usuarios.listado
+  menu_name: main
+  weight: 0
