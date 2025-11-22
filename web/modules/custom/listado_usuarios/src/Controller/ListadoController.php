@@ -41,8 +41,10 @@ class ListadoController extends ControllerBase
         // Extraer el array de usuarios.
         $usuarios = $data['usuarios'];
 
+        //var_dump($usuarios);
+
         // Parámetros de paginación manual.
-        $items_por_pagina = 5;
+        $items_por_pagina = 6;
         $total_usuarios = count($usuarios);
 
         // Calcular total de páginas.
