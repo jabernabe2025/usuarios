@@ -41,7 +41,7 @@ class ListadoController extends ControllerBase
         // Extraer el array de usuarios.
         $usuarios = $data['usuarios'];
 
-        //var_dump($usuarios);
+       
 
         // Parámetros de paginación manual.
         $items_por_pagina = 6;
