@@ -8,6 +8,11 @@
  * See COPYRIGHT.txt and LICENSE.txt files in the "core" directory.
  */
 
+$a = 12;
+$b = 10;
+$c = $a + $b;
+print($c);
+
 use Drupal\Core\DrupalKernel;
 use Symfony\Component\HttpFoundation\Request;
 
